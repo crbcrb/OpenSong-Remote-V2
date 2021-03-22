@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "admin": "Control de servicio",
+    "alert": "Alerta",
+    "setup": "Configuración",
+    "remote": "Pantalla remota",
+    "searchP": "Presentación de búsqueda",
+    "searchL": "Insertar canción",
+    "info": "Información",
+    "save": "Guardar",
+    "cancel": "Cancela",
+    "ok": "bien"
+  },
+  "setup": {
+    "head1": "Host de OpenSong",
+    "head2": "Pantalla remota",
+    "head3": "Velocidad de carga de las diapositivas",
+    "hosttitel": "editar host OpenSong",
+    "host": "dirección IP o nombre de host",
+    "port": "puerto",
+    "ww": "contraseña",
+    "theme": "Tema",
+    "light": "Ligero",
+    "dark": "Oscuro",
+    "tonen": "Mostrar como",
+    "remote1": "Texto",
+    "remote2": "Imagen",
+    "textsize": "tamaño de texto",
+    "small": "pequeño",
+    "large": "grande",
+    "speed": "rápido= aplicación receptiva / más cambio de caída de OpenSong<br>lento= aplicación menos receptiva / menos cambio de caída de OpenSong",
+    "fast": "rápido",
+    "slow": "despacio",
+    "mode1": "Pantalla única",
+    "mode2": "Pantalla dual",
+    "net1": "conectado a " ,
+    "net2": "conexión correcta",
+    "net3": "error de websocke",
+    "net4": "sin conexión",
+    "net5": "el navegador no admite websockets",
+    "net6": "ninguna presentación activa",
+    "net7": "desconectado",
+    "host1": "nombre ya en uso",
+    "bridge": "puente",
+    "tag": "etiqueta",
+    "chorus": "coro",
+    "choose": "elegir uno .."
+  },
+  "state": {
+    "normal": "Normaa",
+    "black": "Negro",
+    "hide": "Ocultar",
+    "freeze": "Congelar",
+    "logo": "Logo",
+    "white": "Blanco",
+    "left": "Anterior",
+    "right": "Próximo"
+  },
+  "alert": {
+    "show": "Mostrar",
+    "hide": "Ocultar",
+    "alert": "Alerta"
+  },
+  "search": {
+    "sets": "Conjuntos",
+    "choose": "Seleccionar un conjunto",
+    "stopshow": "Detener presentación",
+    "letop": "Let op!",
+    "stopwarn": "Ya se está ejecutando una presentación, ¿quieres detenerla?",
+    "wait": "Por favor, espere ..."
+  },
+  "song": {
+    "head2": "Directorio de la canción",
+    "choose1": "Elige un paquete de canciones",
+    "choose2": "Selecciona una canción del paquete",
+    "after": "Insertar después de",
+    "setverse": "Orden de presentación",
+    "insert1": "Insertar canción",
+    "insert2": "Agregado"
+  },
+  "info": {
+    "line1": "Versión",
+    "line2": "Control remoto para OpenSong",
+    "line3": "Esta aplicación está construida con onsen.io y vanilla javascript",
+    "line4": "OpenSong es una aplicación de software de código abierto y gratuita creada para administrar letras, acordes, hojas de guía, transparencias, proyección de computadora y más. Más información en www.opensong.org",
+    "line5": "Requisitos",
+    "line6": "Opensong debe estar ejecutándose con la API de automatización habilitada <br> Para habilitar, vaya en OpenSong a 'Configuración' - 'Configuración general' - pestaña 'Sistema'. <br> En 'API de automatización', marque 'Habilitar control remoto' servidor'",
+    "line7": "Insertar canción requiere OpenSong 2.2.7 o más reciente (falla silenciosamente en versiones anteriores)",
+    "line8": "Todas las demás funciones requieren OpenSong 2 o más reciente"
+  }
+}

@@ -1,0 +1,83 @@
+.ui-icon-blank {
+  background-image: url(images/ui-icon-blank.png);
+}
+
+.ui-icon-unblank {
+  background-image: url(images/ui-icon-unblank.png);
+}
+
+/* Overwrite style from jquery-mobile.css */
+.ui-li .ui-li-desc .ui-btn .ui-btn-text a.ui-link-inherit{
+  white-space: normal;
+}
+.ui-overlay-a {
+  background-color: #ffffff;
+}
+#remote-screen.ui-page-theme-a {
+  background-color: #000;
+}
+.ui-listview > li > a.ui-btn {
+  white-space: normal;
+  text-overflow: initial;
+}
+#remote-screen {
+  height: 100vh;
+  overflow: hidden;
+}
+.screen-tekst {
+  font-family: calibri, sans-serif;
+  font-size: 10vmin;
+  font-weight: normal;
+}
+#current-screen-titel {
+  font-size: 7vmin;
+  font-style: italic;
+  text-align: center;
+}
+.screen-tekst img {
+  object-fit: contain;
+  margin: auto;
+}
+.geenpad {
+  padding: 0;
+}
+#songLyrics {
+  height: auto;
+  max-height: 30vh;
+  overflow-y: auto;
+  overflow-x; hidden;
+  white-space: pre;
+}
+#songselect {
+  font-style: italic;
+}
+@media screen and (orientation:portrait) {
+    /* Portrait styles */
+  .screen-tekst img {
+    max-width: 99vw;
+  }
+}
+@media screen and (orientation:landscape) {
+    /* Landscape styles */
+  .screen-tekst img {
+    max-height: 99vh;
+  }
+}
+@media screen and (min-width: 560px) {
+  /* toont mode buttons naast elkaar*/
+  .breed {
+    display: block;  
+  }
+  .smal {
+    display: none;  
+  }
+}
+@media screen and (max-width: 559px) {
+  /* toont mode buttons in popup*/
+  .breed {
+    display: none;  
+  }
+  .smal {
+    display: block;  
+  }
+}

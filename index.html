@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<head>
+  <link type="text/css" rel="stylesheet" href="./css/onsenui.css">
+  <link id="thema" type="text/css" rel="stylesheet" href="./css/onsen-css-components.min.css">
+  <script src="./files/onsenui.min.js"></script>
+  <!-- i18next versie 19.9.2 -->
+  <script type="text/javascript" src="./files/i18next.min.js"></script>
+  <script type="text/javascript" src="./files/i18nextHttpBackend.min.js"></script>
+  <script type="text/javascript" src="./files/i18nextBrowserLanguageDetector.min.js"></script>
+</head>
+<body>
+  <!-- OpenSong Remote versie 2.0.0 -->
+
+
+<ons-splitter>
+  <ons-splitter-side id="menu" side="left" width="220px" collapse>
+      <ons-page>
+      <ons-list>
+        <ons-list-item tappable>
+          <img src="./files/images/OpensongLogo.png" width="72" height="72">
+        </ons-list-item>
+        <ons-list-item tappable onclick="osr.loadPage('service-manager.html')">
+          <span id="nav-admin">-Liturgie beheer</span>
+        </ons-list-item>
+        <ons-list-item tappable onclick="osr.loadPage('remote-screen.html')">
+          <span id="nav-remote">-Remote screen</span>
+        </ons-list-item>
+        <ons-list-item tappable onclick="osr.loadPage('presentatie.html')">
+          <span id="nav-searchP">-Zoek presentatie</span>
+        </ons-list-item>
+        <ons-list-item tappable onclick="osr.loadPage('search.html')">
+          <span id="nav-searchL">-Lied toevoegen</span>
+        </ons-list-item>
+        <ons-list-item tappable onclick="osr.warnMenu()">
+          <span id="nav-alert">-Waarschuwing</span>
+        </ons-list-item>
+        <ons-list-item tappable onclick="osr.loadPage('setup.html')">
+          <span id="nav-setup">-Instellingen</span>
+        </ons-list-item>
+        <ons-list-item tappable onclick="osr.loadPage('info.html')">
+          <span id="nav-info">-Info</span>
+        </ons-list-item>
+      </ons-list>
+    </ons-page>
+  </ons-splitter-side>
+  <ons-splitter-content id="content">
+    <ons-navigator id="myNavigator" page="setup.html"></ons-navigator>
+  </ons-splitter-content>
+</ons-splitter>
+
+<template id="service-manager.html">
+  <ons-page id="service-manager">
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="osr.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        <span id="service-titel">Liturgie beheer</span>
+      </div>
+      <div class="right">
+        <ons-progress-circular id="bezig" style="padding: 8px;"></ons-progress-circular>
+      </div>
+    </ons-toolbar>
+    <ons-card>
+        <ons-list id="ulService">
+        </ons-list>
+    </ons-card>
+    <ons-bottom-toolbar>
+      <div style="float:left;">
+        <ons-toolbar-button  onclick="osr.previousSlide(this)" id="service-previous">-vorige</ons-toolbar-button>
+      </div>
+      <div style="float:right;">
+        <ons-toolbar-button onclick="osr.nextSlide(this)" id="service-next">-volgende</ons-toolbar-button>
+      </div>
+      <div style="text-align:center;">
+        <ons-toolbar-button id="smStatus" onclick="osr.statusClick(this)">Status</ons-toolbar-button>
+      </div>
+    </ons-bottom-toolbar>
+  </ons-page>
+</template>
+
+<template id="remote-screen.html">
+  <ons-page id="remote-screen" onclick="osr.open()">
+    <ons-card>
+    <div class="title">
+      <div id="current-screen-titel" class="screen-tekst"></div>
+    </div>
+    <div class="content">
+      <div id="current-screen-tekst" class="screen-tekst"></div>
+    </div>
+    </ons-card>
+  </ons-page>
+</template>
+
+<template id="presentatie.html">
+  <ons-page id="presentatie">
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="osr.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        <span id="present-searchP">Zoek presentatie</span>
+      </div>
+    </ons-toolbar>
+    <ons-card>
+        <span id=present-head1>Projecten</span>: 
+        <ons-select id="search-sets" onchange="osr.presentShow(event)" style="width:80vw;">
+        </ons-select>
+      </div>
+      <div id="sets-status">-Even geduld, lijst wordt opgehaald...</div>
+    </ons-card>
+    <ons-card>
+      <span style="white-space:nowrap; display:inline-block">
+        <label class="left"><ons-radio name="mode" input-id="lblMode2" checked></ons-radio></label>
+        <label for="lblMode2" id="sets-screen2" class="center">Dubbel scherm </label>
+      </span>
+      <span style="white-space:nowrap; display:inline-block">
+        <label class="left"><ons-radio name="mode" input-id="lblMode1"></ons-radio></label>
+        <label for="lblMode1" id="sets-screen1" class="center">Enkel scherm</label>
+      </span>
+    </ons-card>
+    <ons-bottom-toolbar>
+        <ons-toolbar-button id="set-show" onClick="osr.presentStop()">Presentatie stoppen</ons-toolbar-button>
+    </ons-bottom-toolbar>
+  </ons-page>
+</template>
+
+<template id="search.html">
+  <ons-page id="search">
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="osr.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        <span id="search-head1">Lied toevoegen</span>
+      </div>
+    </ons-toolbar>
+    <ons-card>
+      <div>
+        <span id="search-head2">Liedbundel</span>: <ons-select id="search-folders" onchange="osr.selectFolder(event)" style="width: 80vw;">
+        </ons-select>
+      </div>
+      <div id="search-status">-Even geduld, lijst wordt opgehaald...</div><br>
+      <input type="search" id="search-filter" class="input input--material"  value="" placeholder="Filter..." oninput="osr.filterSong(event)" class="search-input search-input--material" style="width: 80vw;">
+      <div>
+        <ons-select id="search-songs" onchange="osr.selectSong(event)" style="width: 80vw;">
+        </ons-select>
+      </div>
+      </div>
+    </ons-card>
+    <ons-card>
+      <!--<div id="song-name">songnaam</div>-->
+      <h3 id="song-titel">titel</h3>
+      <div id="song-verses-label">Presentatie volgorde</div>
+      <div>
+        <input type="search" id="song-verses" value="" class="input input--material" style="width: 80vw;">
+      </div>
+        <br><span id="search-after">Invoegen na</span>: <ons-select id="after-song" style="width: 80vw;">
+        </ons-select>
+    </ons-card><ons-card>
+      <div id="song-lyrics" style="max-height:calc(100vh - 550px);overflow-y: auto;"></div>
+    </ons-card>
+    <ons-bottom-toolbar>
+        <ons-toolbar-button id="song-show" onClick="osr.addSong()">Voeg lied toe</ons-toolbar-button>
+    </ons-bottom-toolbar>
+  </ons-page>
+</template>
+
+<template id="setup.html">
+  <ons-page id="setup">
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="osr.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        <span id="setup-titel" >Instellingen</span>
+      </div>
+    </ons-toolbar>
+    <ons-card>
+      <div class="title">
+        <div style="float:right;"><ons-icon icon="md-plus" onclick="osr.editHost(this)"></ons-icon></div>
+        <span id="setup-head1">OpenSong host</span>
+      </div>
+      <div class="content">
+        <ons-list id='OsHosts'>
+        </ons-list>
+      </div>
+    </ons-card>
+    <ons-card>
+      <div class="content">
+        <section>
+        <form name="fThema" onclick="osr.themaClick(this)">
+          <span id="setup-theme">Thema</span>: &nbsp;<span style="white-space:nowrap; display:inline-block">
+            <label class="left"><ons-radio name="thema" input-id="lblThema1" value="dark" checked></ons-radio></label>
+            <label for="lblThema1" id="setup-theme1" class="center">Donker</label>
+          </span>
+          <span style="white-space:nowrap; display:inline-block">
+            <label class="left"><ons-radio name="thema" input-id="lblThema2" value="light"></ons-radio></label>
+            <label for="lblThema2" id="setup-theme2" class="center">Helder</label>
+          </span>
+        </form>
+        </section>
+      </div>
+    </ons-card>
+    <ons-card>
+      <div class="title" id="setup-head2">Remote screen</div>
+      <div class="content">
+        <section>
+        <form name="fScreenSoort" onclick="osr.screenSoortClick(this)">
+          <span id="setup-remote">Tonen als</span>: &nbsp;<span style="white-space:nowrap; display:inline-block">
+            <label class="left"><ons-radio name="screensoort" input-id="lblRemote2" value="a"></ons-radio></label>
+            <label for="lblRemote2" id="setup-remote1" class="center">Tekst</label>
+          </span>
+          <span style="white-space:nowrap; display:inline-block">
+            <label class="left"><ons-radio name="screensoort" input-id="lblRemote1" value="c"></ons-radio></label>
+            <label for="lblRemote1" id="setup-remote2" class="center">Plaatje</label>
+          </span>
+        </form>
+        </section>
+        <section><br><span id="tekst-size">tekst grootte</span>
+        <ons-row>
+          <ons-col width="50px" style="text-align: center; line-height: 31px;">
+            <span id="tekst-small">-klein</span>
+          </ons-col>
+          <ons-col>
+            <ons-range id="screenSize" style="width: 100%;" step="0.25" value="6" min="3" max="12" onChange="osr.rangeChanged(this)"></ons-range>
+          </ons-col>
+          <ons-col width="50px" style="text-align: center; line-height: 31px;">
+            <span id="tekst-large">-groot</span>
+          </ons-col>
+        </ons-row>
+        </section>
+      </div>
+    </ons-card>
+    <ons-card>
+      <div class="title" id="setup-head3">Speed of loading slides</div>
+      <div class="content">
+        <section>
+          <span id="setup-speed">fast = responsive app / more change of crashing OpenSong&nbsp;|
+          slow&nbsp;=&nbsp;less responsive app / less change of crashing OpenSong</span>
+        <ons-row>
+          <ons-col width="50px" style="text-align: center; line-height: 31px;">
+            <span id="speed1">fast</span>
+          </ons-col>
+          <ons-col>
+            <ons-range id="loadDelay" style="width: 100%;" value="2" step="0.25" min="1" max="10" onChange="osr.rangeChanged(this)"></ons-range>
+          </ons-col>
+          <ons-col width="50px" style="text-align: center; line-height: 31px;">
+            <span id="speed2">slow</span>
+          </ons-col>
+        </ons-row>
+        </section>
+      </div>
+    </ons-card>
+  </ons-page>
+</template>
+
+<template id="info.html">
+  <ons-page id="info">
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="osr.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Info
+      </div>
+    </ons-toolbar>
+    <ons-card>
+      <div class="title">OpenSong Remote</div>
+      <div class="content">
+      <h3><span id="info1">version</span>: 2.0 <small>(18c21)</small></h3>
+      <p id="info2">Remote control for OpenSong</p>
+      <p id="info3">This app is build with onsen.io and vanilla javascript.</p>
+      <p id="info4">OpenSong is a free, open-source software application created to manage lyrics, chords, lead sheets, overheads, computer projection, and more. More info on www.opensong.org</p>
+      </div>
+    </ons-card>
+    <ons-card>
+      <div class="title"><span id="info5">Requirements</span>:</div>
+      <div class="content">
+      <ul>
+        <li id="info6">Opensong must be running with Automation API enabled<br>To enable, goto in OpenSong to "Settings" - "General Settings" - "System" tab.<br>Under "Automation API" tick "Enable remote control server"</li>
+        <li id="info7">Insert song requiries OpenSong 2.2.7 or newer (fails silently on older versions)</li>
+        <li id="info8">All other functions require OpenSong 2 or newer</li>
+      </ul>
+      </div>
+    </ons-card>
+  </ons-page>
+</template>
+
+<template id="edithost.html">
+  <ons-alert-dialog id="EditHost"cancelable modifier="rowfooter">
+  <div class="alert-dialog-title" id="ehTitel">Edit OpenSong host</div>
+  <div class="alert-dialog-content">
+    <p><ons-input id="ehName" type="text" placeholder="Naam" float></ons-input><br>&nbsp;<br></p>
+    <p><ons-input id="ehIP" type="text" placeholder="ip address or hostname" float></ons-input><br>&nbsp;<br></p>
+    <p><ons-input id="ehPort" type="number" placeholder="poort" float value="8082"></ons-input><br>&nbsp;<br></p>
+    <p><ons-input id="ehPassword" type="password" placeholder="OpenSong wachtwoord" float></ons-input><br>&nbsp;<br></p>
+  </div>
+  <div class="alert-dialog-footer">
+    <ons-alert-dialog-button id="ehCancel" onclick="osr.cancelEditHost(this)">Cancel</ons-alert-dialog-button>
+    <ons-alert-dialog-button id="ehSave" onclick="osr.editHostSave(this)">Opslaan</ons-alert-dialog-button>
+  </div>
+  </ons-alert-dialog>
+</template>
+
+<template id="popupWarning.html">
+  <ons-alert-dialog id="popupWarning"cancelable modifier="rowfooter">
+  <div class="alert-dialog-title" id="alert-head1">-Waarschuwing</div>
+  <div class="alert-dialog-content">
+    <div><input id="warnMessage" type="text" class="text-input text-input--underbar" placeholder=""><br>&nbsp;<br></div>
+  </div>
+    <div class="alert-dialog-footer alert-dialog-footer--rowfooter">
+      <button class="alert-dialog-button alert-dialog-button--rowfooter" id="clearWarn" onClick="osr.setWarn(this)">-Weghalen</button>
+      <button class="alert-dialog-button alert-dialog-button--rowfooter" id="setWarn" onClick="osr.setWarn(this)">-Tonen</button>
+    </div>  </ons-alert-dialog>
+</template>
+
+<ons-popover direction="left" id="hostMenu" cancelable>
+  <div style="padding: 2px; text-align: center;">
+      <ons-button modifier="quiet" onclick="osr.editHost()">
+        <ons-icon icon="md-edit"></ons-icon> Edit</ons-button><br>&nbsp;<br>
+      <ons-button modifier="quiet" onclick="osr.deleteHost()">
+        <ons-icon icon="md-delete"></ons-icon> Delete</ons-button>
+  </div>
+</ons-popover>
+
+</body>
+  <script src="./files//opensong2.min.js"></script>
+</html>

@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "admin": "Service control",
+    "alert": "Alert",
+    "setup": "Setup",
+    "remote": "Remote screen",
+    "searchP": "Search presentation",
+    "searchL": "Insert song",
+    "info": "Info",
+    "save": "Save",
+    "cancel": "Cancel",
+    "ok": "OK"
+  },
+  "setup": {
+    "head1": "OpenSong host",
+    "head2": "Remote screen",
+    "head3": "Speed of loading slides",
+    "hosttitel": "edit OpenSong host",
+    "host": "ip address or hostname",
+    "port": "port",
+    "ww": "password:",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "tonen": "Show as",
+    "remote1": "Text",
+    "remote2": "Picture",
+    "textsize": "text size",
+    "small": "small",
+    "large": "large",
+    "speed": "fast= responsive app / more change of crashing OpenSong<br>slow= less responsive app / less change of crashing OpenSong",
+    "fast": "fast",
+    "slow": "slow",
+    "mode1": "Single screen",
+    "mode2": "Dual screen",
+    "net1": "connected to " ,
+    "net2": "connection o.k.",
+    "net3": "websocket error",
+    "net4": "no connection",
+    "net5": "browser does not support websockets",
+    "net6": "no presentation active",
+    "net7": "disconnected",
+    "host1": "name already in use",
+    "bridge": "bridge",
+    "chorus": "chorus",
+    "tag": "tag",
+    "choose": "choose one..."
+  },
+  "state": {
+    "normal": "Normal",
+    "black": "Black",
+    "hide": "Hide",
+    "freeze": "Freeze",
+    "logo": "Logo",
+    "white": "White",
+    "left": "Previous",
+    "right": "Next"
+  },
+  "alert": {
+    "show": "Show",
+    "hide": "Hide",
+    "alert": "Alert"
+  },
+  "search": {
+    "sets": "Sets",
+    "choose": "Select a set",
+    "stopshow": "Stop presentation",
+    "letop": "Pay attention!",
+    "stopwarn": "A presentation is already running, do you want to stop it?",
+    "wait": "Please wait..."
+  },
+  "song": {
+    "head2": "Song dir",
+    "choose1": "Choose a song bundle",
+    "choose2": "Select a song from the bundle  ",
+    "after": "Insert after",
+    "setverse": "Presentation order",
+    "insert1": "Insert song",
+    "insert2": "Added"
+  },
+  "info": {
+    "line1": "Version",
+    "line2": "Remote control for OpenSong",
+    "line3": "This app is build with onsen.io and vanilla javascript",
+    "line4": "OpenSong is a free, open-source software application created to manage lyrics, chords, lead sheets, overheads, computer projection, and more. More info on www.opensong.org",
+    "line5": "Requirements",
+    "line6": "Opensong must be running with Automation API enabled<br>To enable, goto in OpenSong to 'Settings' - 'General Settings' - 'System' tab.<br>Under 'Automation API' tick 'Enable remote control server'",
+    "line7": "Insert song requiries OpenSong 2.2.7 or newer (fails silently on older versions)",
+    "line8": "All other functions require OpenSong 2 or newer"
+  }
+}

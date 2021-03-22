@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "admin": "Kontrola usługi",
+    "alert": "Alert",
+    "setup": "Konfiguracja",
+    "remote": "Zdalny ekran",
+    "searchP": "Wyszukaj prezentację",
+    "searchL": "Wstaw piosenkę",
+    "info": "Informacje",
+    "save": "Zapisz",
+    "cancel": "Anuluj",
+    "ok": "OK"
+  },
+  "setup": {
+   "head1": "Host OpenSong",
+    "head2": "Ekran zdalny",
+    "head3": "Szybkość ładowania slajdów",
+    "hosttitel": "edytuj hosta OpenSong",
+    "host": "adres ip lub nazwa hosta",
+    "port": "port",
+    "ww": "hasło:",
+    "theme": "Theme",
+    "light": "Lekki",
+    "dark": "Ciemny",
+    "tonen": "Pokaż jako",
+    "remote1": "Tekst",
+    "remote2": "Obrazek",
+    "textsize": "rozmiar czcionki",
+    "small": "mały",
+    "large": "duży",
+    "speed": "szybka= responsywna aplikacja / większa zmiana powodującej awarię OpenSong<br>wolno= mniej responsywna aplikacja / mniejsza zmiana powodującej awarię OpenSong",
+    "fast": "szybko",
+    "slow": "wolno",
+    "mode1": "Pojedynczy ekran",
+    "mode2": "Podwójny ekran",
+    "net1": "podłączony do",
+    "net2": "połączenie o.k.",
+    "net3": "błąd websocket",
+    "net4": "brak połączenia",
+    "net5": "przeglądarka nie obsługuje gniazd sieciowych",
+    "net6": "brak aktywnej prezentacji",
+    "net7": "odłączony",
+    "host1": "nazwa już używana",
+    "bridge": "most",
+    "chorus": "chór",
+    "tag": "tag",
+    "choose": "wybierz jeden ..."
+  },
+  "state": {
+    "normal": "Normalny",
+    "black": "Czarny",
+    "hide": "Ukryć ",
+    "freeze": "Zamrażać ",
+    "logo": "Logo",
+    "white": "Biały",
+    "left": "Poprzedni",
+    "right": "Kolejny"
+  },
+  "alert": {
+    "show": "Pokazać",
+    "hide": "Ukryć",
+    "alert": "Alarm"
+  },
+  "search": {
+    "sets": "Zestawy",
+    "choose": "Wybierz zestaw",
+    "stopshow": "Zatrzymaj prezentację",
+    "letop": "Uważaj!",
+    "stopwarn": "Prezentacja już działa, czy chcesz ją zatrzymać?",
+    "wait": "Proszę czekać ..."
+  },
+  "song": {
+    "head2": "Song dir",
+    "choose1": "Wybierz pakiet utworów",
+    "choose2": "Wybierz utwór z pakietu",
+    "after": "Wstaw po",
+    "setverse": "Kolejność prezentacji",
+    "insert1": "Wstaw utwór",
+    "insert2": "Dodane"
+  },
+  "info": {
+    "line1": "Wersja",
+    "line2": "Zdalne sterowanie dla OpenSong",
+    "line3": "Ta aplikacja jest zbudowana przy użyciu onsen.io i zwykłego javascript",
+    "line4": "OpenSong to darmowa aplikacja o otwartym kodzie źródłowym, stworzona do zarządzania tekstami, akordami, arkuszami prowadzącymi, nagłówkami, projekcjami komputerowymi i nie tylko. Więcej informacji na www.opensong.org",
+    "line5": "Wymagania",
+    "line6": "Opensong musi być uruchomiony z włączonym Automation API <br> Aby włączyć, przejdź w OpenSong do 'Ustawienia' - 'Ustawienia ogólne' - 'System'. <br> Pod 'Automation API' zaznacz 'Włącz zdalne sterowanie serwer'",
+    "line7": "Wstaw wymagania dotyczące utworu OpenSong 2.2.7 lub nowszego (cicha awaria w starszych wersjach)",
+    "line8": "Wszystkie inne funkcje wymagają OpenSong 2 lub nowszego"
+  }
+}

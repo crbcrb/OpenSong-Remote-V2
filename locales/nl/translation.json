@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "admin": "Liturgie beheer",
+    "alert": "Waarschuwing",
+    "setup": "Instellingen",
+    "remote": "Remote screen",
+    "searchP": "Zoek presentatie",
+    "searchL": "Lied toevoegen",
+    "info": "Info",
+    "save": "Opslaan",
+    "cancel": "Afbreken",
+    "ok": "OK"
+  },
+  "setup": {
+    "head1": "OpenSong host",
+    "head2": "Remote screen",
+    "head3": "Snelheid waarmee dia's worden geladen",
+    "hosttitel": "OpenSong host bewerken",
+    "host": "ip adres of hostnaam",
+    "port": "poort",
+    "ww": "beveiligings sleutel",
+    "theme": "Thema",
+    "light": "Helder",
+    "dark": "Donker",
+    "tonen": "Tonen als",
+    "remote1": "Tekst",
+    "remote2": "Plaatje",
+    "textsize": "tekst grootte",
+    "small": "klein",
+    "large": "groot",
+    "speed": "snel= app reageert snel / meer kans dat OpenSong gaat hangen<br>traag= app reageert langzamer/ minder kans dat OpenSong gaat hangen",
+    "fast": "snel",
+    "slow": "traag",
+    "mode1": "Enkel scherm",
+    "mode2": "Dubbel scherm",
+    "net1": "verbonden met " ,
+    "net2": "--verbinding o.k.",
+    "net3": "websocket error",
+    "net4": "geen verbinding",
+    "net5": "browser does not support websockets",
+    "net6": "geen lopende presentatie",
+    "net7": "--disconnected",
+    "host1": "die naam bestaat al",
+    "bridge": "brug",
+    "chorus": "refrein",
+    "tag": "tussenspel",
+    "choose": "maak een keuze"
+  },
+  "state": {
+    "normal": "Normaal",
+    "black": "Zwart",
+    "hide": "Verborgen",
+    "freeze": "Vastzetten",
+    "logo": "Logo",
+    "white": "Wit",
+    "left": "Vorige",
+    "right": "Volgende"
+  },
+  "alert": {
+    "show": "Tonen",
+    "hide": "Weghalen",
+    "alert": "Waarschuwing"
+  },
+  "search": {
+    "sets": "Projecten",
+    "choose": "Kies een presentatie",
+    "stopshow": "Presentatie stoppen",
+    "letop": "Let op!",
+    "stopwarn": "Er loopt al een presentatie, wil je die stoppen?",
+    "wait": "Even geduld, lijst wordt opgehaald"
+  },
+  "song": {
+    "head2": "Liedbundels",
+    "choose1": "Kies een liedbundel",
+    "choose2": "Kies een lied uit de bundel  ",
+    "after": "Invoegen na",
+    "setverse": "Presentatie volgorde",
+    "insert1": "Lied invoegen",
+    "insert2": "Toegevoegd"
+  },
+  "info": {
+    "line1": "Versie",
+    "line2": "Afstandsbediening voor OpenSong",
+    "line3": "Deze app is gebouwd met onsen.io en vanille javascript",
+    "line4": "OpenSong is een gratis, open-source softwareapplicatie gemaakt om songteksten, akkoorden, lead sheets, overheadkosten, computerprojectie en meer te beheren. Meer info op www.opensong.org",
+    "line5": "Vereisten",
+    "line6": "Opensong moet draaien met Automation API ingeschakeld <br> Om in te schakelen, ga in OpenSong naar 'Instellingen' - 'Algemene instellingen' - 'Systeem' tab. <br> Vink onder 'Automatisering API' 'Afstandsbediening inschakelen' aan server'",
+    "line7": "Invoegen nummer vereist OpenSong 2.2.7 of nieuwer (mislukt stil op oudere versies)",
+    "line8": "Alle andere functies vereisen OpenSong 2 of nieuwer"
+  }
+}
